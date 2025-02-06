@@ -31,7 +31,6 @@ function verificarParImpar() {
 
 }
 
-
 function evaluarNota() {
     let nota = document.getElementById("nota").value;
 
@@ -45,8 +44,36 @@ if (numeroconvertido >=90) {
             alert("Reprobado")
         }
 
-    }
+}
 
+
+function calcularDescuento() {
+    let monto = document.getElementById("monto").value;
+
+    let numeroconvertido = parseFloat(monto)
+
+    if (monto > 100) {
+        let descuento = monto * 0.10
+        let montoFinal = monto - descuento
+        document.getElementById("mensajeDescuento").innerText = `El monto final es de $${montoFinal} con un descuento de $${descuento}`
+    } else {
+        document.getElementById("mensajeDescuento").innerText = `El monto final es de $${monto}`
+    }
+}
+
+
+function verificarMayorMenor() {
+    let edadSimple = document.getElementById("edadSimple").value;
+
+
+    console.log(edad)
+
+    if (edadSimple >= 18) {
+        document.getElementById("mensajeEdadSimple").innerHTML = `Eres mayor de edad`
+    } else {
+        document.getElementById("mensajeEdadSimple").innerHTML = `No eres mayor de edad`
+        }
+}
 
 
 
