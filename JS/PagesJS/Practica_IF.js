@@ -64,7 +64,7 @@ function calcularDescuento() {
 
 function verificarMayorMenor() {
     let edadSimple = document.getElementById("edadSimple").value;
-
+//preguntar
 
     console.log(edad)
 

@@ -24,13 +24,13 @@ export let Datos_LiNav = [
         Nombre: "Listado Clientes", 
         Detalle: "Practica",     
         Url: "/Practica_Listado_Clientes.html",
-        Activo: false
+        Activo: true
     },
     {   Id: 4,
         Nombre: "Tarea Pokemon",   
         Detalle: "Practica",  
         Url: "/Practica_TareaPokemon.html",
-        Activo: false
+        Activo: true
     },
     {   Id: 5,
         Nombre: "Tarea Netflix",    
@@ -66,13 +66,13 @@ export let Datos_LiNav = [
         Nombre: "Practica IF",    
         Detalle: "Practica ", 
         Url: "/Practica_IF.html",
-        Activo: true
+        Activo: false
     },
     {   Id: 12,
         Nombre: "Practica CICLO",    
         Detalle: "Practica ", 
         Url: "/Practica_CICLO.html",
-        Activo: false
+        Activo: true
     },
 ];
 
