@@ -18,7 +18,7 @@ export let Datos_LiNav = [
         Nombre: "Calculadora",
         Detalle: "Practica",      
         Url: "/Practica_Calculadora.html",
-        Activo: true
+        Activo: false
     },
     {   Id: 3,
         Nombre: "Listado Clientes", 
@@ -66,7 +66,7 @@ export let Datos_LiNav = [
         Nombre: "Practica IF",    
         Detalle: "Practica ", 
         Url: "/Practica_IF.html",
-        Activo: false
+        Activo: true
     },
     {   Id: 12,
         Nombre: "Practica CICLO",    
