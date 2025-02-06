@@ -53,10 +53,68 @@ function Filtrar() {
 
 
 
+function buscarDesdeInput() {
+    let input1 = document.getElementById('buscarNombre').value;  //Metio el valor pepe
+    let resultado = document.getElementById('resultadoBusqueda');
+
+    //Busca en el arreglo 
+    let busqueda = personas.find(x=> x.nombre === input1) //nombre == pepe
+
+
+    //Aqui le indicamos si el resultado es verdadero o falso 
+    if (busqueda) {
+
+        resultado.innerHTML = `encontrado a la persona ${busqueda.nombre}`
+
+    } else {
+        resultado.innerHTML = `No encontrado a la persona`
+    }
+}
 
 
 
+//Crear la funcion del onclick //check 
+// Input id value //no tiene 
+//  mostrar el resultado inner 
+//caso 2
+function primeraPersonaActiva() {
+    let resultado = document.getElementById('resultadoActivo');//inner 
 
+    let busqueda = personas.find(x=> x.activo == true)
+
+    
+  //Aqui le indicamos si el resultado es verdadero o falso 
+if (busqueda) {
+    
+    resultado.innerHTML = `primera persona encontrada  ${busqueda.nombre}`
+
+} else {
+    resultado.innerHTML = `No se encontro nadie activo `
+}
+
+}
+
+//Crear la funcion del onclick  
+// Input id value 
+//  mostrar el resultado inner 
+//caso 6
+
+function personasActivas() {
+    let resultado = document.getElementById('listaActivos');
+
+    personas.forEach(element => {
+        
+        if (element.activo == true) {
+            
+        resultado.innerHTML += `
+        
+            <li>nombre : ${element.nombre} </li>`
+        
+            
+        }
+
+    });
+}
 
 
 
