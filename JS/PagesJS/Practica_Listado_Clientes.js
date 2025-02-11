@@ -1,5 +1,54 @@
 console.log(`Funcionando Archivo:  Practica_Listado_Clientes`);
 
+// Datos locales simulando la API
+let Datos_Locales = [
+    { id: 1, name: "Juan Pérez", email: "juan.perez@example.com" },
+    { id: 2, name: "María Gómez", email: "maria.gomez@example.com" },
+    { id: 3, name: "Carlos Rodríguez", email: "carlos.rodriguez@example.com" },
+    { id: 4, name: "Ana Fernández", email: "ana.fernandez@example.com" }
+];
+
+let DatosFiltrados = []
+let contenedor = document.getElementById('tbody');
+
+
+DatosFiltrados = Datos_Locales
+
+
+//aela
+
+document.addEventListener('DOMContentLoaded', () => {
+    Mostrar_CampoTabla()
+
+});
+
+
+
+function Mostrar_CampoTabla() {
+    
+    let html = ""
+
+    DatosFiltrados.forEach(element => {
+
+        console.log(element);
+
+        html += `
+        <tr>
+            <td> ${element.id} </td>
+            <td> ${element.name} </td>
+            <td> ${element.email}</td>
+        </tr>
+        
+        `
+
+    });
+
+    contenedor.innerHTML = html
+}
+
+
+
+
 
 function exportToExcel() {
 
