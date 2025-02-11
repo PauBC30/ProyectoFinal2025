@@ -44,3 +44,6 @@ function exportToPDF() {
         alert("Error al exportar a PDF: " + error.message);
     }
 }
+
+
+
