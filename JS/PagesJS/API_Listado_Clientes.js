@@ -10,9 +10,8 @@ let Datos_Locales = []
 let DatosFiltrados = []
 let DatosFiltrados2 = []
 let contenedor = document.getElementById('tbody');
+let contenedor2 = document.getElementById('tbody2');
 
-
-DatosFiltrados = Datos_Locales
 
 
 //aela
@@ -105,6 +104,8 @@ function consultarDatos2() {
         .then(result => {           //3- Resultado  result
             // custom error
             console.log(result.results)
+            DatosFiltrados2 = result.results
+            Mostrar_CampoTabla2()
 
         })
         .catch(error => {      ///4- Catch
@@ -116,3 +117,24 @@ function consultarDatos2() {
 }
 
 
+function Mostrar_CampoTabla2() {
+    
+    let html = ""
+
+    DatosFiltrados2.forEach(element => {
+
+        console.log(element);
+
+        html += `
+        <tr>
+            <td> ${element.name} </td>
+            <td> ${element.status} </td>
+            <td> <img src="" alt=""> ${element.image}</td>
+        </tr>
+        
+        `
+
+    });
+
+    contenedor2.innerHTML = html
+}
