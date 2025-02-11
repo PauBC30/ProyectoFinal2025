@@ -129,7 +129,7 @@ function Mostrar_CampoTabla2() {
         <tr>
             <td> ${element.name} </td>
             <td> ${element.status} </td>
-            <td> <img src="" alt=""> ${element.image}</td>
+            <td> <img src="${element.image}" alt=""> </td>
         </tr>
         
         `
