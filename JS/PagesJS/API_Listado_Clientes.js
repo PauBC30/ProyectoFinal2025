@@ -14,9 +14,12 @@ DatosFiltrados = Datos_Locales
 
 
 //aela
-
 document.addEventListener('DOMContentLoaded', () => {
     consultarDatos()
+
+});
+document.addEventListener('DOMContentLoaded', () => {
+    consultarApi()
 
 });
 
@@ -35,3 +38,16 @@ function consultarDatos() {
         });
 }
 
+function consultarApi() {
+    fetch(Api_Usuarios)
+        
+        .then(response => response.json())
+        .then(result => {
+            // custom error
+            console.log(result)
+        })
+        .catch(error => {
+            // common error
+            return null;
+        });
+}
