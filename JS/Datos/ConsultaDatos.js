@@ -4,6 +4,10 @@
 //lo -- crea objeto
 //kv -- crea key : value 
 
+function Creaboton() {
+    
+}
+
 
 export let Datos_LiNav = [
 
@@ -24,19 +28,19 @@ export let Datos_LiNav = [
         Nombre: "Listado Clientes", 
         Detalle: "Practica",     
         Url: "/Practica_Listado_Clientes.html",
-        Activo: true
+        Activo: false
     },
     {   Id: 4,
         Nombre: "Tarea Pokemon",   
         Detalle: "Practica",  
         Url: "/Practica_TareaPokemon.html",
-        Activo: false
+        Activo: true
     },
     {   Id: 5,
         Nombre: "Tarea Netflix",    
         Detalle: "Practica", 
         Url: "/Practica_TareaNetflix.html",
-        Activo: false
+        Activo: true
     },
     {   Id: 7,
         Nombre: "API_TareaPokemon",    
@@ -48,7 +52,7 @@ export let Datos_LiNav = [
         Nombre: "API_Listado_Cliente",    
         Detalle: "Proyecto", 
         Url: "/API_Listado_Clientes.html",
-        Activo: true
+        Activo: false
     },
     {   Id: 9,
         Nombre: "API_VerUsuario",    
@@ -74,6 +78,13 @@ export let Datos_LiNav = [
         Url: "/Practica_CICLO.html",
         Activo: false
     },
+    {
+        Id: 14,  
+        Nombre: "Punto Extra",  
+        Detalle: "Puntos Extra",  
+        Url: "/puntoextra.html",  
+        Activo: true  
+    }
 ];
 
 export let urlCompleta = window.location.href; // Obtiene la URL completa
