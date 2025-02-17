@@ -1,54 +1,33 @@
+import { obtenerNombrePagina, obtenerImagenPorNombre } from '../Datos/ConsultaDatos.js';
 
-import {nombrePagina} from '../Datos/ConsultaDatos.js'
+document.addEventListener('DOMContentLoaded', () => {
+    try {
+        const nombrePagina = obtenerNombrePagina();
+        const imagen = obtenerImagenPorNombre(nombrePagina);
+        
+        console.log('Página actual:', nombrePagina);
+        console.log('Imagen seleccionada:', imagen);
 
-
-
-//aela
-document.addEventListener('DOMContentLoaded', (e) => {
-    
-    Mostrar_Footer()
-    
-});
-
-
-
-
-function Mostrar_Footer() {
-    let Contenedor_IdFooter = document.getElementById('Header'); //gi ls
-
-     Contenedor_IdFooter.innerHTML
-     = `
-
-  <div class="container">
-                <div class="row">
-                    <!-- Inicio: Contenedor 1  -->
-                    <div class="col-md-6 col-sm-6 ">
-                        <img src="Assets/image1.png" class="w-100" alt="">
+        document.getElementById('Header').innerHTML = `
+            <header class="header-container">
+                <div class="header-content">
+                    <div class="header-image">
+                        <img src="${imagen}" alt="${nombrePagina} Header Image" 
+                            onerror="this.src='/Assets/favicon.ico'"
+                            class="header-img">
                     </div>
-                    <!-- Fin: Contenedor 1 -->
-
-                    <!-- Inicio: Contenedor 2  -->
-                    <div class="col-md-6 col-sm-6">
-                        <!-- b4-jumbotron-default -->
-                        <div class="">
-                            <h3 class="lead text-center">Página  ${nombrePagina}</h3>
-                            <p class="lead mt-5">
-                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam, autem nisi sequi
-                                repellat porro tenetur alias praesentium quasi veritatis quo aliquam, nam consequuntur
-                                perferendis ut nobis quae maxime reprehenderit! Quia.
-                            </p>
-
-
-                            <a class="btn btn-secondary btn-lg mt-2 d-flex justify-content-center" href="Jumbo action link" role="button">Jumbo
-                                action name</a>
-
-
-                        </div>
+                    <div class="header-text">
+                        <h1 class="header-title">${nombrePagina}</h1>
+                        <p>Completa tu búsqueda aquí</p>
+                        </p>
                     </div>
-                    <!-- Fin: Contenedor  2-->
                 </div>
-            </div>
-
-`;
-    
-}
+            </header>
+        `;
+    } catch (error) {
+        console.error('Error al mostrar el header:', error);
+        document.getElementById('Header').innerHTML = `
+            <div class="error">Error al cargar el header</div>
+        `;
+    }
+});
