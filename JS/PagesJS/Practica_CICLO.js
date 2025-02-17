@@ -1,77 +1,87 @@
 console.log(`Funcionando Archivo: Practica_CICLO`);
 let personas = [
-    { nombre: "Juan", edad: 25, activo: true },
-    { nombre: "Ana", edad: 17, activo: false },
-    { nombre: "Carlos", edad: 30, activo: true },
-    { nombre: "Laura", edad: 16, activo: true },
-    { nombre: "Pedro", edad: 40, activo: false }
+    { nombre: "Juan", edad: 25, activo: true },//0
+    { nombre: "Ana", edad: 17, activo: false },//1
+    { nombre: "Carlos", edad: 30, activo: true },//2
+    { nombre: "Laura", edad: 16, activo: true },//3
+    { nombre: "Pedro", edad: 40, activo: false }//4
+
+
 ];
 
-let clientes = [
-    { nombre: "Juan", edad: 25, activo: true },
-    { nombre: "Ana", edad: 17, activo: false },
-    { nombre: "Carlos", edad: 30, activo: true },
-    { nombre: "Laura", edad: 16, activo: true },
-    { nombre: "Pedro", edad: 40, activo: false }
+let Clientes = [
+    { nombre: "Juan", edad: 25, activo: true },//0
+    { nombre: "Ana", edad: 17, activo: false },//1
+    { nombre: "Carlos", edad: 30, activo: true },//2
+    { nombre: "Laura", edad: 16, activo: true },//3
+    { nombre: "Pedro", edad: 40, activo: false }//4
+
+
 ];
+
+console.log(personas[4].nombre)
 
 console.log(personas[1].nombre)
+//array [x]
+//objeto .
 
+//bucles o ciclos 
 
+//Foreach
 
-//array se quita, y se coloca el nombre de nuestra lista(array)
+// array quitelo y coloque su array :) 
+//element serian las posiciones 0 1,2
 personas.forEach(element => {
+
     console.log(element)
+
 });
 
-clientes.forEach(element => {
-    if (element.activo == true) {
+Clientes.forEach(element => {
+
+    if (element.activo === true) {
+
         console.log(element.nombre,element.activo)
+
     }
-    
+
 });
 
-//cantidad de elementos de una lista
+//Contar Cantidad de elementos de un array 
 console.log(personas.length)
 
-
-let buscarnombre = personas.find(x =>x.nombre === "Ana");
+//Filtrar por una propiedad 
+let buscarnombre = personas.find(x =>x.nombre === "Ana" )
 
 console.log(buscarnombre)
-//buscando un elemento en una lista
 
-
-let buscaractivo = personas.find(x =>x.activo === true);
+let buscaractivo = personas.find(x =>x.activo === true )
 
 console.log(buscaractivo)
 
-
 function Filtrar() {
-    let valor = document.getElementById('sensitive').value;
+    let valor = document.getElementById('sensitivo').value; //gi
     console.log(valor)
 }
 
-
-
+//caso 1
 function buscarDesdeInput() {
-    let input1 = document.getElementById('buscarNombre').value;  //Metio el valor pepe
-    let resultado = document.getElementById('resultadoBusqueda');
+  let input1 = document.getElementById('buscarNombre').value.trim();  //Metio el valor pepe
+  let resultado = document.getElementById('resultadoBusqueda');
 
-    //Busca en el arreglo 
-    let busqueda = personas.find(x=> x.nombre === input1) //nombre == pepe
+  //Busca en el arreglo 
+  let busqueda = personas.find(x=> x.nombre.toUpperCase() === input1.toUpperCase()) //nombre == pepe
 
 
-    //Aqui le indicamos si el resultado es verdadero o falso 
-    if (busqueda) {
+  //Aqui le indicamos si el resultado es verdadero o falso 
+  if (busqueda) {
+    
+    resultado.innerHTML = `encontrado a la persona ${busqueda.nombre}`
 
-        resultado.innerHTML = `encontrado a la persona ${busqueda.nombre}`
-
-    } else {
-        resultado.innerHTML = `No encontrado a la persona`
-    }
+  } else {
+    resultado.innerHTML = `No encontrado a la persona`
+  }
 }
-
-
 
 //Crear la funcion del onclick //check 
 // Input id value //no tiene 
@@ -84,13 +94,13 @@ function primeraPersonaActiva() {
 
     
   //Aqui le indicamos si el resultado es verdadero o falso 
-if (busqueda) {
+  if (busqueda) {
     
     resultado.innerHTML = `primera persona encontrada  ${busqueda.nombre}`
 
-} else {
+  } else {
     resultado.innerHTML = `No se encontro nadie activo `
-}
+  }
 
 }
 
@@ -106,23 +116,17 @@ function personasActivas() {
         
         if (element.activo == true) {
             
-        resultado.innerHTML += `
-        
+          resultado.innerHTML += `
+
             <li>nombre : ${element.nombre} </li>`
-        
+          
             
         }
 
     });
 }
 
+//entregable 2 proyecto hoy 
 
-//Casos 3-4-5
-
-
-
-
-
-
-
-
+//3-4-5
+//Entregable 3 Proyecto 10 febrero a las 12 pm
